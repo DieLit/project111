@@ -1,0 +1,62 @@
+@media (max-width: 1200px){
+    main{
+        max-width:970px;
+    }
+}
+
+@media (max-width: 992px){
+    main{
+        max-width:750px;
+    }
+
+    .btn{
+        margin-right:7%;
+    }
+    .bot_main_text{
+        width:70%;
+    }
+
+    .header_picture img{
+        margin-left:-35%;
+        z-index: -5;
+    }
+
+    .about_img{
+        margin-top:30%;
+    }
+
+    .about_txt{
+        margin-right:25%;
+    }
+    
+    .cont_team{
+        margin-top:-10%;
+        
+    }
+
+    .about_team{
+        margin-left:-67%;
+        margin-top:50%;
+    }
+
+    .review{
+        margin-top:10%;
+    }
+
+
+    .review_cont2{
+        margin-top:7%;
+        margin-left:1%;
+    }
+
+    .footer-logo{
+        margin-bottom:5%;
+    }
+}
+
+@media (max-width: 768px){
+    main{
+        max-width:none;
+    }
+
+}
