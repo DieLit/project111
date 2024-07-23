@@ -13,43 +13,13 @@
 <div class="cont-filter">
 
 <div class="zdar">
-
+<form action="" method="POST">
+    @csrf
     <div class="search">
         <input class="input-filter" style="font-family:Open sans, FontAwesome" type="text" placeholder="Введите ключевое слово">
         <a class="search-btn" href="#"><i class="fa-sharp fa-solid fa-magnifying-glass"></i> Поиск</a>
     </div>
-
-    <div class="line-cont">
-        <div class="line"></div>
-        <p class="lince-p">Настройки фильтра</p>
-    </div>
-
-    <div class="filter">
-        <input class="input-room" type="text" list="list" placeholder="Выберите количество комнат">
-            <datalist id="list">
-                <option value="1 комната">
-                <option value="2 комнаты">
-                <option value="3 комнаты">
-                <option value="4 комнаты">
-                <option value="5 комнаты">
-            </datalist>
-
-            <input class="input-location" type="text" list="location" placeholder="Выберите локацию">
-            <datalist id="location">
-                <option value="Бразилия">
-                <option value="Италия">
-                <option value="Тайланд">
-                <option value="Германия">
-                </datalist>
-    </div>
-
-<div class="price">
-    <input class="input-price" type="range" min="0" max="1000000" step="10000">
-        <div class="text-price">
-        <p class="min">0 ₽</p>
-        <p class="max">100 000 000 ₽</p>
-    </div>
-</div>
+</form>
 </div>
     
 </div>
@@ -57,21 +27,25 @@
 <main>
     <section class="catalog">
 <!---------------------------------- CARDS --------------------------->
+@foreach ($posts as $post)
         <div class="product">
-            <img src="">
-            <h3> </h3>
-            <p> комнат</p>
-            <p>>₽</p>
+            @isset($path)
+                <img src="{{asset('/storage/' . $path)}}">
+            @endisset
+            <h3>{{ $post->name_apps }}</h3>
+            <p> {{ $post->room }} комнат</p>
+            <p>{{ $post->price }}₽</p>
             <p></p>
-            <a href="/item?id=" class="btn">Открыть</a>
+            <a href="{{ route('posts.item', $post->id) }}" class="btn">Открыть</a>
         </div>
+        @endforeach
     </section>
 
 </main>
 
 
 
-<!-------------------------------- SPAM ----------------------------->
+{{-- <!-------------------------------- SPAM ----------------------------->
 <section class="spam_cont">
 
         <div class="spam-img-block">
@@ -85,6 +59,6 @@
             <button class="spam-btn" type="submit">Подписаться</button>
         </div>
         
-</section>
+</section> --}}
 
 @endsection

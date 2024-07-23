@@ -2,7 +2,21 @@
 
 
 @section('content')
+@if(session('success'))
+
+<div class="alert alert-success text-center position-fixed top-10 start-50 translate-middle">
+    {{session('success')}}
+</div>
+
+@endif
 <main>
+
+    <style>
+        .team_card{
+            padding-top: 48px;
+        }
+    </style>
+    
     <article class="home">
         <div class="top_main_text">
             <h1>Совеременные<br>дома для всех</h1>
@@ -32,7 +46,7 @@
         </form>
     </article>
 
-    <article class="about">
+    <article class="about" id="about">
         <div class="cont_about">
             <div class="about_img">
                 <img src="/public/img/about.png" alt="">
@@ -47,17 +61,17 @@
     </article>
 
 
-    <article class="cont_team">
+    <article class="cont_team" id="team">
         <div class="team_card">
-            <img class='about_img1' src="/public/img/sad.jpg" alt="">
+            <img class='about_img1' src="/public/img/people.jpg" alt="">
             <h1 class="name">Имя Фамилия</h1>
-            <p class="udr_name">Frontend разработчик</p>
+            <p class="udr_name">Директор</p>
         </div>
 
         <div class="team_card2">
-            <img class='about_img2' src="/public/img/happy.jpg" alt="">
+            <img class='about_img2' src="/public/img/people.jpg" alt="">
             <h1 class="name2">Имя Фамилия</h1>
-            <p class="udr_name2">Backend разработчик</p>
+            <p class="udr_name2">Риэлтор</p>
         </div>
 
         <div class="about_team">
@@ -66,7 +80,7 @@
         </div>
     </article>
 
-    <article class="review">
+    <article class="review" id="review">
     <div class="review_txt">
         <h1 class="review_zag">Отзывы</h1>
         <p>Отзывы наших клиентов — искренние рассказы о нашей <br> 

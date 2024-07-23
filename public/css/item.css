@@ -439,53 +439,29 @@ a{
     height:350px;
 }
 
-
 /**************************** FOOTER **************************/
+
 .footer-cont{
+    display:flex;
+    align-items: end;
     width:100%;
     background-color:#1C3988;
-    height:191px;
-    
-    
+    height:181px;
+    margin-top:2% m !important;
+    justify-content: center;  
+    align-items: center;  
 }
 
 .footer-logo{
-    position:absolute;
-    margin-top:5%;
-    margin-left:50%;
+    margin-top: -2%;
 }
 
 .footer-h1{
+    text-align: center;
     position:absolute;
     margin-top:8%;
-    margin-left:45%;
+    text-align: center;
     font-family: 'Merriweather', serif;
     color:white;
     font-weight:700;
-}
-
-
-
-.about-line-cont{
-    margin-right:50px;
-    margin-top:2%;
-    margin-bottom: 2%;
-}
-
-.about-line{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.about-line h1{
-    font-family: 'Merriweather', serif;
-    font-size:22px;
-    font-weight:700;
-    margin-right:150px;
-}
-
-iframe{
-    margin-left:10%;
-    margin-top: 3%;
 }
